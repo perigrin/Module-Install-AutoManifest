@@ -56,8 +56,21 @@ In Makefile.PL:
 In MANIFEST.SKIP:
 
   # put your list of patterns here
+  MANIFEST.SKIP
+  ^\.gitignore$
   ^\.git/
-  ^your-crazy-files-whatever$
+  /\.svn/
+  ^\.svn/
+  ~$
+  \.sw.$
+  \.bak$
+  \bblib\b
+  \bpm_to_blib\b
+  ^Makefile$
+  ^Makefile\.old$
+  ^control/
+
+Be especially sure to inclue C<\bblib\b> in there otherwise PAUSE will complain.
 
 In MANIFEST:
 
